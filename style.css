@@ -93,21 +93,52 @@ main ends here
 /*--------------
  Highlights 
 -------------- */
-.title h1 {
+#highlights {
+  display: flex;
+  align-items: center;
+  padding: 60px 180px 80px 180px;
+  gap: 70px;
+}
+
+.left-side {
+  flex: 6;
+}
+
+.highlights-title h1 {
   font-size: 48px;
   font-weight: 700;
 }
 
-.left-side {
-}
-
 .right-side {
+  flex: 6;
 }
 
 .right-side img {
   width: 567px;
   height: 427px;
 }
+
+/*---------------
+  Ticket form 
+--------------- */
+#ticket-section {
+  display: flex;
+  justify-content: center;
+}
+
+.ticket-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.ticket-form input {
+  font-size: 25px;
+  margin-top: 15px;
+  border: 1px solid lightblue;
+  padding: 10px;
+  border-radius: 5px;
+}
+
 /*-----------
  footer 
 ----------- */
@@ -115,7 +146,7 @@ footer {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 8px;
+  margin-top: 80px;
   margin-bottom: 63px;
 }
 
