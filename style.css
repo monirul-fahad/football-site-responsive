@@ -10,17 +10,27 @@ body {
   font-family: "Poppins", sans-serif;
 }
 
+p {
+  color: #6c6c6c;
+}
+
 /*------------
-    Header 
+Header starts here
 ------------ */
-header {
+
+/* ------------------
+Top banner section 
+------------------- */
+
+.top-banner {
   background-color: #2d25a0;
 }
 
-.top-flexible-section {
+.flexible-section {
   display: flex;
   align-items: center;
   padding: 60px 150px 80px 150px;
+  gap: 100px;
 }
 
 .half-width {
@@ -47,4 +57,86 @@ header {
 .half-width img {
   width: 556px;
   height: 438px;
+}
+
+/* ---------
+main starts here
+---------- */
+main {
+  width: 1120px;
+  margin: 0 auto;
+  margin-top: 70px;
+}
+.players {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.player {
+  padding: 15px;
+  box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.15);
+}
+
+.player-photo img {
+  width: 100%;
+}
+
+.player h2 {
+  font-size: 24px;
+  font-weight: 700;
+}
+/* ---------
+main ends here
+---------- */
+
+/*--------------
+ Highlights 
+-------------- */
+.title h1 {
+  font-size: 48px;
+  font-weight: 700;
+}
+
+.left-side {
+}
+
+.right-side {
+}
+
+.right-side img {
+  width: 567px;
+  height: 427px;
+}
+/*-----------
+ footer 
+----------- */
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 8px;
+  margin-bottom: 63px;
+}
+
+footer img {
+  width: 483px;
+  height: 110px;
+}
+
+#social-icons {
+  width: 170px;
+  height: 32px;
+  margin: 20px 0;
+  display: flex;
+  gap: 14px;
+}
+
+#social-icons .fab {
+  font-size: 32px;
+}
+
+#copyrights {
+  font-size: 18px;
+  color: black;
 }
