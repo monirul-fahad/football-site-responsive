@@ -6,12 +6,26 @@
   padding: 0;
 }
 
+img,
+iframe {
+  width: 100%;
+  height: auto;
+}
+
 body {
   font-family: "Poppins", sans-serif;
 }
 
 p {
   color: #6c6c6c;
+}
+
+.flex-half {
+  flex: 6;
+}
+
+.section-padding {
+  padding: 70px 0px;
 }
 
 .btn {
@@ -34,14 +48,15 @@ p {
   cursor: pointer;
   color: black;
 }
-/*------------
-Header starts here
------------- */
 
 /* ------------------
 Top banner section 
 ------------------- */
-
+.hero-container {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 35px;
+}
 .top-banner {
   background-color: #2d25a0;
 }
@@ -49,12 +64,6 @@ Top banner section
 .flexible-section {
   display: flex;
   align-items: center;
-  padding: 60px 140px 80px 150px;
-  gap: 100px;
-}
-
-.half-width {
-  flex: 6;
 }
 
 .main-title h1 {
@@ -63,30 +72,14 @@ Top banner section
   font-weight: 700;
 }
 
-/* .btn {
-  background-color: #e02c6d;
-  padding: 10px 24px;
-  color: #fff;
-  border: none;
-  font-size: 16px;
-  font-weight: 500;
-  margin-top: 27px;
-  border: none;
-} */
-
-.half-width img {
-  width: 556px;
-  height: 438px;
-}
-
 /* ---------
 main starts here
 ---------- */
-main {
-  width: 1120px;
+.container {
+  max-width: 1050px;
   margin: 0 auto;
-  margin-top: 70px;
 }
+
 .players {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -98,30 +91,18 @@ main {
   box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.15);
 }
 
-.player-photo img {
-  width: 100%;
-}
-
 .player h2 {
   font-size: 24px;
   font-weight: 700;
 }
-/* ---------
-main ends here
----------- */
 
 /*--------------
  Highlights 
 -------------- */
-#highlights {
+.highlights {
   display: flex;
   align-items: center;
-  padding: 60px 180px 80px 180px;
   gap: 70px;
-}
-
-.left-side {
-  flex: 6;
 }
 
 .highlights-title h1 {
@@ -129,26 +110,17 @@ main ends here
   font-weight: 700;
 }
 
-.right-side {
-  flex: 6;
-}
-
-.right-side img {
-  width: 567px;
-  height: 427px;
-}
-
 /*---------------
 video-section 
 ---------------- */
-#video-section {
+.video-section {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-#video-section h1 {
-  font-size: 30px;
+.video-section h1 {
+  font-size: 25px;
 }
 
 .videos {
@@ -156,6 +128,11 @@ video-section
   align-items: center;
   padding: 25px 0px 60px 0px;
   gap: 70px;
+  width: 100%;
+}
+
+.videos iframe {
+  height: 350px;
 }
 
 /*---------------
@@ -181,7 +158,7 @@ video-section
 
 .ticket-btn {
   width: 340px;
-  transition: ease-out 0.3s;
+  transition: ease-out 0.4s;
 }
 
 .ticket-btn:hover {
@@ -200,8 +177,7 @@ footer {
 }
 
 footer img {
-  width: 483px;
-  height: 110px;
+  max-width: 320px;
 }
 
 #social-icons {
@@ -219,4 +195,75 @@ footer img {
 #copyrights {
   font-size: 18px;
   color: black;
+}
+
+@media only screen and (max-width: 768px) {
+  .main-title h1 {
+    font-size: 36px;
+  }
+
+  .flexible-section {
+    flex-direction: column;
+    margin-bottom: 50px;
+    gap: 40px;
+  }
+
+  .half-width img {
+    width: 100%;
+    padding: 25px;
+  }
+
+  .players {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .player {
+    margin: 0 25px;
+    padding: 15px;
+  }
+
+  .highlights {
+    flex-direction: column;
+    margin: 0 25px 0 25px;
+    padding: 0;
+    gap: 29px;
+  }
+
+  .highlights-title h1 {
+    font-size: 30px;
+    font-weight: 700;
+  }
+
+  .right-side img {
+    width: 100%;
+    height: 248px;
+  }
+  .video-section {
+    padding: 25px;
+  }
+  .video-section h1 {
+    font-size: 18px;
+    text-align: center;
+  }
+  .videos {
+    flex-direction: column;
+    gap: 0;
+  }
+  .videos iframe {
+    height: 200px;
+  }
+
+  footer {
+    margin-top: 50px;
+  }
+
+  footer img {
+    padding: 0 70px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .players {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
